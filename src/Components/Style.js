@@ -62,7 +62,7 @@ export const Caixa = () => {
 
 )
 }
-let troca = 0
+
 let contagem = 0
 const Crescer = () => {
     if (contagem === 0) {
@@ -70,36 +70,10 @@ const Crescer = () => {
         caixa.style.transform = "scale(100%)"
         caixa.style.transition = "ease-in-out 1s"
         contagem += 1
-        troca += 1
     } else if (contagem === 1) {
         let caixa = document.querySelector(".vermelha")
         caixa.style.transform = "scale(0.1%)"
         caixa.style.transition = "ease-in-out 1s"
         contagem -= 1
-        troca += 1
-    }
-    if (troca === 0) {
-        document.querySelector('body').style.backgroundColor = "blue"
-    } else if (troca === 1) {
-         document.querySelector('body').style.backgroundColor = "yellow"
-    } else if (troca === 2) {
-        document.querySelector('body').style.backgroundColor = "purple"
-    } else if (troca === 3) {
-         document.querySelector('body').style.backgroundColor = "orange"
-    }
-    else if (troca === 4) {
-         document.querySelector('body').style.backgroundColor = "pink"
-    }
-    else if (troca === 5) {
-       document.querySelector('body').style.backgroundColor = "brown"
-    }
-    else if (troca === 6) {
-         document.querySelector('body').style.backgroundColor = "grey"
-    }
-    else if (troca === 7) {
-        document.querySelector('body').style.backgroundColor = "teal"
-    } else if (troca === 8) {
-         document.querySelector('body').style.backgroundColor = "white"
-         troca-=8
     }
 }
