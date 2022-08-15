@@ -36,11 +36,20 @@ export const Container3 = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-border: 3px double;
-width: 20vw;
-height: 30vh;
+width: 0vw;
+height: 0vh;
+font-size: 0px;
 transition: ease-in-out 1s;
-transform: scale(1%);
+
+animation: rodar 3.5s linear 0s infinite normal none;
+@keyframes rodar {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
 `
 
 export const Big = ({ children }) => {
@@ -67,12 +76,18 @@ let contagem = 0
 const Crescer = () => {
     if (contagem === 0) {
         let caixa = document.querySelector(".vermelha")
-        caixa.style.transform = "scale(100%)"
         caixa.style.transition = "ease-in-out 1s"
+        caixa.style.border = "3px double"
+        caixa.style.width =  "16vw"
+        caixa.style.height =  "26vh"
+        caixa.style.fontSize = "15px"
         contagem += 1
     } else if (contagem === 1) {
         let caixa = document.querySelector(".vermelha")
-        caixa.style.transform = "scale(0.1%)"
+        caixa.style.border = "none"
+        caixa.style.width =  "0vw"
+        caixa.style.height =  "0vh"
+        caixa.style.fontSize = "0px"
         caixa.style.transition = "ease-in-out 1s"
         contagem -= 1
     }
